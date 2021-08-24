@@ -1,0 +1,386 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "rock";
+  text-decoration: none;
+  list-style: none;
+  font-family:"rock";
+}
+
+a:visited{
+  color: inherit;
+}
+
+@font-face {
+  font-family:"rock"; 
+  src: url(assets/font/RockfordSans-Light.otf);
+}
+:root{
+ /* Paleta de colores */
+ --fuchsia: #ff01fbff;
+  --turquoise: #1ed5c3ff;
+  --black: #000000ff;
+  --han-purple: #5e17ebff;
+  --neon-blue: #5271ffff;
+
+
+/* Set neon color */
+--neon-text-color: #ff01fbff;
+--neon-border-color: #08f;
+
+}
+
+/*estilado*/
+
+
+/*ocultar iconos*/
+.respmenu input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times{
+  display: none;
+}
+
+
+body{
+  animation: slideUp 900ms ease;
+  background: #000;
+}
+
+
+/*header-navbar*/
+header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #000;
+  width: 100%;
+  position: fixed;
+}
+
+.respmenu ul li{
+  display: inline-block;
+  padding:.2rem;
+}
+
+.respmenu ul li i{
+  padding-right: .5rem;
+}
+
+.respmenu li a{
+    display: block;
+    padding: .2rem;
+    background: linear-gradient(to right, #ff01fbff,#5271ffff,#1ed5c3ff);
+    background-size: 200% 200%;
+    animation: rainbow 2s ease-in-out infinite;
+    background-clip: text;
+    -webkit-background-clip:text;
+    color: #fff;
+    text-align:center;
+    transition: color .1s ease-in-out;
+    font-family: "rock";
+}
+
+.respmenu li a:hover{
+  color: rgba(0, 0, 0, 0);
+}
+
+hr{
+  height: 4px;
+  width: 100%;
+  background:linear-gradient(to right,#5e17ebff, #ff01fbff,#5271ffff, #1ed5c3ff);
+  position: fixed;
+  z-index: 1000;
+  top: 3rem;
+  padding: 0;
+  margin: 0;
+  
+}
+
+/*portada*/
+.portada{
+  padding-top: 70px;
+  background-image: url(assets/img/graffiti-alley-in-baltimore-maryland-photo.jpg);
+  width: 100%;
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  background-color: #000;
+  background-attachment: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: .5s ease-out all;
+}
+
+
+
+.portada h1{
+  font-size: 2.35rem;
+  text-align: center;
+  font-weight: 200;
+  font-style: italic;
+  color: #fff;
+  padding: 1rem 1.5rem 1rem;
+  border: 0.4rem solid #fff;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  animation: flicker 1.5s infinite alternate;
+}
+
+h1::-moz-selection {
+  background-color: var(--neon-border-color);
+  color: var(--neon-text-color);
+}
+
+h1::selection {
+  background-color: var(--neon-border-color);
+  color: var(--neon-text-color);
+}
+
+h1:focus {
+  outline: none;
+}
+
+/*cuenta regresiva*/
+
+#cuenta{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  margin-top:.5rem ;
+  flex-wrap: wrap;
+  transition: ease-in-out .3s;
+}
+
+#cartel:hover ~ #cuenta{
+  transform: scale(1.2);
+}
+
+@media screen  and (max-width:670px){
+  
+#cartel:hover ~ #cuenta{
+  transform: scale(1);
+}
+}  
+
+
+.simply-section{
+  width: 6rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 5px;
+  border-radius: 6px;
+  color: #fff;
+  text-shadow: 4px 3px 2px rgba(0, 0, 0, 1);
+}
+
+
+.simply-amount{
+  font-family:"rock";
+  font-size: 1.5rem;
+  padding-right: .2rem;
+  font-weight: 600;
+}
+
+.simply-word{
+  font-weight: 600;
+}
+
+
+
+#cuenta :nth-child(4n){
+  padding-left: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:801px) and (max-width:1088px){
+/*header-navbar*/
+  header{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  hr{
+    top: 5.2rem;
+  }
+
+  .portada{
+    padding-top: 110px;
+  }
+  
+}
+/*correccion HR*/
+@media (min-width:1066px) and (max-width:1088px){
+  hr{
+    top: 3rem;
+  }
+}
+
+@media screen and (max-width:800px) {
+  
+
+  .portada{
+    padding-top: 135px;
+  }
+
+/*header-navbar-menu-hamburguesa-responsive*/
+.respmenu a { 
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    max-width: 200px;
+
+}
+
+.respmenu input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
+    position: absolute;  
+    box-sizing: border-box;
+    margin: 0;
+    padding-left: 1.5rem;
+    right: 50%;
+    top: 0;
+    width: 48px;
+    height: 48px;  
+  }
+
+  .respmenu input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times{
+    display: block;
+    position: absolute;
+  }
+   
+  .respmenu .fa-bars, .respmenu .fa-times {
+    font-size: 48px;
+    pointer-events: none;
+  }
+   
+  .respmenu input[type="checkbox"] {
+    opacity: 0; 
+  }
+   
+  .respmenu {
+    color: white;
+    position: relative; 
+    background: #000;
+    min-height: 48px;
+    width: 100%;
+  }
+
+  header{
+    display: flex;
+    flex-wrap: wrap;
+  }
+   
+  .respmenu nav {
+    display: none;
+  }
+   
+  .respmenu input:checked ~ nav {
+    display: block;
+  }
+
+  .respmenu input:checked ~ nav ul{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    padding-top: 3rem;
+  }
+   
+  .respmenu input:checked ~ .fa-bars {
+    display: none;
+  }
+   
+  .respmenu input:not(:checked) ~ .fa-times {
+    display: none;
+  }
+
+  .logo{
+    padding-bottom:1rem ;
+  }
+
+  hr{
+    top: 6.3rem;
+  }
+
+}
+
+
+
+
+/* Animate  neon  */
+@keyframes flicker {
+    
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    
+      text-shadow:
+          -0.2rem -0.2rem 1rem #fff,
+          0.2rem 0.2rem 1rem #fff,
+          0 0 2rem var(--neon-text-color),
+          0 0 4rem var(--neon-text-color),
+          0 0 6rem var(--neon-text-color),
+          0 0 8rem var(--neon-text-color),
+          0 0 10rem var(--neon-text-color);
+      
+      box-shadow:
+          0 0 .5rem #fff,
+          inset 0 0 .5rem #fff,
+          0 0 2rem var(--neon-border-color),
+          inset 0 0 2rem var(--neon-border-color),
+          0 0 4rem var(--neon-border-color),
+          inset 0 0 4rem var(--neon-border-color);        
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+      box-shadow: none;
+  }    
+}
+
+
+
+/*Animate li*/
+@keyframes rainbow { 
+  0%{background-position:left}
+  50%{background-position:right}
+  100%{background-position:left}
+}
+
+
+
+@keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
