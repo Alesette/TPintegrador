@@ -264,8 +264,8 @@ h1:focus {
     padding-left: 1.5rem;
     right: 50%;
     top: 0;
-    width: 48px;
-    height: 48px;  
+    width: 60px;
+    height: 48px;
   }
 
   .respmenu input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times{
