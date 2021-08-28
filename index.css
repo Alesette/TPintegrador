@@ -41,8 +41,11 @@ a:visited{
 
 /*animacion de la pagina*/
 body{
-  animation: slideUp 900ms ease;
   background: #000;
+}
+
+html{
+  animation: slideUp 900ms ease;
 }
 
 
@@ -54,6 +57,7 @@ header{
   background: #000;
   width: 100%;
   position: fixed;
+  border-bottom:2px solid rgba(255, 255, 255, 0.5);
 }
 
 .respmenu ul li{
@@ -160,12 +164,7 @@ h1:focus {
   transform: scale(1.2);
 }
 
-@media screen  and (max-width:670px){
-  
-#cartel:hover ~ #cuenta{
-  transform: scale(1);
-}
-}  
+
 
 
 .simply-section{
@@ -198,22 +197,96 @@ h1:focus {
   padding-left: 2rem;
 }
 
+/* MAIN */
+
+ main{
+   padding-top: .2rem;
+ }
+
+
+.section-container{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.txt-img{
+  width: 43%;
+  height: 18rem;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding:.5rem 2rem;
+  margin: auto;
+  text-align: center;
+  font-size: 3.5vh;
+  box-sizing: border-box;
+}
+
+.txt-img h2{
+  padding-bottom: .3rem;
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.img-main{
+  width: 57%;
+  height: 18rem;
+  overflow: hidden;
+  display: flex;
+  background-image: url(assets/img/tech-dome.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0;
+  border-radius: 4px;
+}
+
+.img-main2{
+  width: 57%;
+  height: 18rem;
+  overflow: hidden;
+  display: flex;
+  background-image: url(assets/img/camping.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0;
+  border-radius: 4px;
+}
+.img-main3{
+  width: 57%;
+  height: 18rem;
+  overflow: hidden;
+  display: flex;
+  background-image: url(assets/img/comida.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0;
+  border-radius: 4px;
+}
+
+/*  GRADIENTE DE TEXTO PARA APLICAR EN EL LINE UP , SOLO AGREGAR LA CLASE A LOS ELEMENTOS
+.textGradient {
+  color: #ff8c00; 
+  background: linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+*/
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ARRANCAN LAS MEDIAQUERYS*/
 
 
 @media (min-width:801px) and (max-width:1088px){
@@ -232,12 +305,17 @@ h1:focus {
   }
   
 }
+
+
 /*correccion HR*/
 @media (min-width:1066px) and (max-width:1088px){
   hr{
     top: 3rem;
   }
 }
+
+
+/* MOBILE */
 
 @media screen and (max-width:800px) {
   
@@ -328,9 +406,116 @@ h1:focus {
     top: 6.4rem;
   }
 
+
+
+  /* MAIN */
+
+  .section-container{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .txt-img{
+    width: 100%;
+    height: 12rem;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding:.5rem 2rem;
+    margin: auto;
+    text-align: center;
+    font-size: 3.5vh;
+    box-sizing: border-box;
+  }
+  
+  .txt-img h2{
+    padding-bottom: .3rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .img-main{
+    width: 100%;
+    height: 11rem;
+    overflow: hidden;
+    display: flex;
+    background-image: url(assets/img/tech-dome.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    border-radius: 4px;
+  }
+
+  
+
+  #segundo .img-main2{
+    order: 1;
+  }
+  
+  .img-main2{
+    width: 100%;
+    height: 11rem;
+    overflow: hidden;
+    display: flex;
+    background-image: url(assets/img/camping.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    border-radius: 4px;
+  }
+  .img-main3{
+    width: 100%;
+    height: 11rem;
+    overflow: hidden;
+    display: flex;
+    background-image: url(assets/img/comida.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    border-radius: 4px;
+  }
+  
 }
 
+@media (min-width:320px) and (max-width:432px){
+  .txt-img{
+    width: 100%;
+    height: 12rem;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding:.5rem 2rem;
+    margin: auto;
+    text-align: center;
+    font-size: 2.6vh;
+    box-sizing: border-box;
+  }
+}
 
+@media screen  and (max-width:670px){
+  
+  #cartel:hover ~ #cuenta{
+    transform: scale(1);
+  }
+}  
+
+
+
+/* ANIMACIONES */
 
 
 /* Animate  neon  */
