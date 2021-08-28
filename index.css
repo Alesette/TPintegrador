@@ -104,7 +104,7 @@ hr{
   padding-top: 70px;
   background-image: url(assets/img/graffiti-alley-in-baltimore-maryland-photo.jpg);
   width: 100%;
-  height: 70vh;
+  height: 100vh;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -217,21 +217,22 @@ h1:focus {
   color: #fff;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   flex-wrap: nowrap;
   padding:.5rem 2rem;
-  margin: auto;
+  margin: .5rem auto;
   text-align: center;
-  font-size: 3.5vh;
   box-sizing: border-box;
 }
 
 .txt-img h2{
-  padding-bottom: .3rem;
+  margin-bottom: .5rem;
   font-size: 2rem;
   font-weight: 600;
   cursor: pointer;
+  padding-bottom: .2rem;
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(to right, #5e17ebff, #ff01fbff,#5271ffff, #1ed5c3ff ) 1;
 }
 
 .img-main{
@@ -296,14 +297,21 @@ h1:focus {
     flex-wrap: wrap;
   }
 
-  hr{
-    top: 5.2rem;
-  }
 
   .portada{
     padding-top: 110px;
   }
   
+}
+
+@media (min-width:801px) and (max-width:900px){
+  .txt-img p{
+    padding-bottom: .5rem;
+    font-size: .95rem;
+  }
+  .img-main2{
+    padding-top: .3rem;
+  }
 }
 
 
@@ -430,15 +438,16 @@ h1:focus {
     padding:.5rem 2rem;
     margin: auto;
     text-align: center;
-    font-size: 3.5vh;
     box-sizing: border-box;
   }
   
   .txt-img h2{
-    padding-bottom: .3rem;
-    font-size: 1.5rem;
+    padding-bottom: .5rem;
+    font-size: 1.2rem;
+    margin-top: .2rem;
     font-weight: 600;
     cursor: pointer;
+    
   }
   
   .img-main{
@@ -484,10 +493,18 @@ h1:focus {
     margin: 0;
     border-radius: 4px;
   }
+
+  .txt-img p{
+    padding-bottom: .5rem;
+    font-size: .9rem;
+  }
+  .img-main2{
+    padding-top: .3rem;
+  }
   
 }
 
-@media (min-width:320px) and (max-width:432px){
+@media (min-width:320px) and (max-width:466px){
   .txt-img{
     width: 100%;
     height: 12rem;
@@ -501,9 +518,24 @@ h1:focus {
     padding:.5rem 2rem;
     margin: auto;
     text-align: center;
-    font-size: 2.6vh;
     box-sizing: border-box;
   }
+  .txt-img h2{
+    padding-bottom: .5rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .txt-img p{
+    padding-bottom: .5rem;
+    font-size: .7rem;
+  }
+  .img-main2{
+    padding-top: .3rem;
+  }
+  
 }
 
 @media screen  and (max-width:670px){
