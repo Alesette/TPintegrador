@@ -722,7 +722,7 @@ footer{
 
 .link-footer ul li{
   display: inline-block;
-  padding: .5rem;
+  padding: .4rem;
 }
 
 .link-footer i{
@@ -1134,13 +1134,17 @@ footer{
   }
 
   .logo-footer{
-    width: 35%;
+    width: 30%;
     order:1;
   }
 
   .link-footer{
-    width: 65%;
+    width: 70%;
     order: 2;
+  }
+
+  .link-footer ul li i{
+    padding: .1rem;
   }
 
   .elist{
